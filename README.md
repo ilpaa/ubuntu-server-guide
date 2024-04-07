@@ -7,9 +7,9 @@ In this guide, you'll learn how to set up network storage on an Ubuntu Server us
 ## Table of Contents
 
 - [Getting Started with Ubuntu Server](#getting-started-with-ubuntu-server)
-- [Installation Guide](installation-guide.md)
-- [Configuration Guide](configuration-guide.md)
-- [Troubleshooting Guide](troubleshooting-guide.md)
+- [Installation Guide](#installation-guide)
+- [Configuration Guide](#configuration-guide)
+- [Troubleshooting Guide](#troubleshooting-guide)
 - [Additional Resources](#additional-resources)
 
 ## Getting Started with Ubuntu Server
@@ -33,7 +33,29 @@ To install Ubuntu Server, you'll need to create a bootable USB drive using a too
 
 Insert the bootable USB drive into the computer where you want to install Ubuntu Server and boot from it. Follow the on-screen instructions to install Ubuntu Server, choosing options such as language, keyboard layout, and disk partitioning as needed.
 
-Once Ubuntu Server is installed and configured, you're ready to proceed with setting up network storage using Samba.
+### Step 4: SSH to the Server
+
+1. **Open a Terminal on Your PC:** If you're using Linux or macOS, open the Terminal application. If you're using Windows, you can use an SSH client like PuTTY or the built-in Windows OpenSSH client.
+
+2. **Connect to Your Server:** Use the following command to SSH into your Ubuntu Server:
+
+    ```bash
+    ssh username@server_ip_address
+    ```
+
+    Replace `username` with your username on the server and `server_ip_address` with the IP address of your Ubuntu Server.
+
+    Example:
+
+    ```bash
+    ssh john@192.168.1.20
+    ```
+    `john` is the username on the server and `192.168.1.20` is the ip address of the server
+
+3. **Enter Your Password:** You'll be prompted to enter the password for the user account on the server. After entering the password, you'll be logged into your server via SSH.
+
+Once you've successfully SSHed into your server, you can proceed to install Samba and configure the following the steps outlined in the Configuration Guide.
+
 
 ## Installation Guide
 
@@ -45,7 +67,7 @@ In this section, we'll cover the installation of Samba on Ubuntu Server.
 Before installing Samba, it's essential to ensure that your package lists are up-to-date. You can do this by running the following command in your terminal:
 
 ```bash
-sudo apt update
+sudo apt update && sudo apt upgrade
 ```
 This command fetches the latest information about available packages from the repositories.
 
@@ -120,14 +142,14 @@ This command opens the configuration file in the Nano text editor with superuser
 Within the configuration file, you'll define shares by adding sections similar to the following:
 
 ```ini
-[share_name]
+[myshare]
    path = /path/to/shared/folder
    browsable = yes
    guest ok = yes
    read only = no
 ```
 
-- **`[share_name]`:** Replace `share_name` with a unique name for your share. This name will be used to identify the share when accessing it from other devices on the network.
+- **`[myshare]`:** Replace `myshare` with a unique name for your share. This name will be used to identify the share when accessing it from other devices on the network.
 
 
 - **`path`:** Specify the full path to the folder you want to share. For example, `/srv/samba/share`.
