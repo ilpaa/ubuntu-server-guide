@@ -7,9 +7,9 @@ In this guide, you'll learn how to set up network storage on an Ubuntu Server us
 ## Table of Contents
 
 - [Getting Started with Ubuntu Server](#getting-started-with-ubuntu-server)
-- [Installation Guide](#installation-guide)
-- [Configuration Guide](#configuration-guide)
-- [Troubleshooting Guide](#troubleshooting-guide)
+- [Installation Guide](#installation-guide.md)
+- [Configuration Guide](#configuration-guide.md)
+- [Troubleshooting Guide](#troubleshooting-guide.md)
 - [Additional Resources](#additional-resources)
 
 ## Getting Started with Ubuntu Server
