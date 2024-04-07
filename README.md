@@ -62,18 +62,29 @@ Once you've successfully SSHed into your server, you can proceed to install Samb
 ![Ubuntu Logo](images/ubuntu-logo.png)
 
 In this section, we'll cover the installation of Samba on Ubuntu Server.
-## Step 1: Update Package Lists
 
-Before installing Samba, it's essential to ensure that your package lists are up-to-date. You can do this by running the following command in your terminal:
+## Step 1: Install Samba
 
-```bash
-sudo apt update && sudo apt upgrade
-```
-This command fetches the latest information about available packages from the repositories.
+To install Samba on your Ubuntu Server, follow these steps:
 
-## Step 2: Install Samba
+1. **Update Package Lists:** Before installing new packages, it's a good idea to update the package lists for repositories. Run the following command:
 
-After the installation is complete, you can verify that Samba has been installed successfully by checking its version. Run the following command:
+    ```bash
+    sudo apt update && sudo apt upgrade
+    ```
+
+2. **Install Samba:** Once the package lists are updated, you can install Samba by running the following command:
+
+    ```bash
+    sudo apt install samba
+    ```
+
+    This command will install the Samba server and its dependencies on your system.
+
+## Step 2: Verify Samba Installation
+
+After installing Samba, you can verify that it has been installed correctly by checking its version. Run the following command:
+
 
 ```bash
 samba --version
