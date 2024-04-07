@@ -31,3 +31,8 @@ sudo systemctl start smbd
 ```
 The first command checks the status of the Samba service, while the second command starts the service if it's not already running.
 
+## Congratulations!
+
+You've successfully installed Samba on your Ubuntu Server. With Samba installed, you're now ready to configure network shares and enable file sharing across your local network. Proceed to the Configuration Guide to set up your shares and start collaborating with others seamlessly. If you encounter any issues during the configuration process, refer back to this guide or the Troubleshooting Guide for assistance. Happy file sharing!
+
+
