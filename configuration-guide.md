@@ -4,7 +4,31 @@
 
 Now that Samba is installed, let's configure it to create network shares.
 
-## Step 1: Edit Samba Configuration File
+## Step 1: Create a Folder for Sharing
+
+Before configuring Samba shares, you'll need to create a folder on your Ubuntu Server that you want to share with other devices on the network.
+
+1. **Choose a Location:** Decide where you want to create the shared folder. For example, you might create it in the `/srv` directory.
+
+2. **Create the Folder:** Use the following command to create the folder:
+
+    ```bash
+    sudo mkdir /media/myshare
+    ```
+
+    Replace `/media/myshare` with the desired path and name for your shared folder.
+
+3. **Set Permissions:** Set appropriate permissions on the folder to ensure that users can access it. For example, you can use the following command to grant read, write, and execute permissions to all users:
+
+    ```bash
+    sudo chmod -R 777 /media/myshare
+    ```
+
+    Adjust the permissions according to your specific requirements and security considerations.
+
+Once you've created the folder and set the appropriate permissions, you can proceed to configure Samba to share this folder on your network.
+
+## Step 2: Edit Samba Configuration File
 
 The main configuration file for Samba is `/etc/samba/smb.conf`. Open this file in a text editor using the following command:
 
@@ -14,7 +38,7 @@ sudo nano /etc/samba/smb.conf
 
 This command opens the configuration file in the Nano text editor with superuser privileges, allowing you to make changes to the Samba configuration.
 
-## Step 2: Configure Shares
+## Step 3: Configure Shares
 
 Within the configuration file, you'll define shares by adding sections similar to the following:
 
@@ -39,7 +63,7 @@ Within the configuration file, you'll define shares by adding sections similar t
 
 Adjust these parameters according to your specific requirements and security considerations. Once you've defined your shares, save the configuration file and proceed to the next step.
 
-## Step 3: Save and Close the Configuration File
+## Step 4: Save and Close the Configuration File
 
 After making changes to the Samba configuration file, ensure to save your modifications and then close the editor.
 
@@ -51,7 +75,7 @@ After making changes to the Samba configuration file, ensure to save your modifi
 
 Ensure that you save any changes you've made before exiting the editor. Once you've saved and closed the file, you're ready to proceed to the next step.
 
-## Step 4: Restart Samba Service
+## Step 5: Restart Samba Service
 
 To apply the changes made to the Samba configuration file, you'll need to restart the Samba service.
 
