@@ -39,15 +39,15 @@ Within the configuration file, you'll define shares by adding sections similar t
 
 Adjust these parameters according to your specific requirements and security considerations. Once you've defined your shares, save the configuration file and proceed to the next step.
 
-## Step 3: Save and Close the File
+## Step 3: Save and Close the Configuration File
 
-After making changes to the Samba configuration file, you'll need to save your modifications and close the editor.
+After making changes to the Samba configuration file, ensure to save your modifications and then close the editor.
 
-1. **Save Changes:** In the Nano text editor, press `Ctrl + O` to write the changes to the file.
-   
-2. **Confirm Save:** Press `Enter` to confirm the filename. If prompted, you may need to confirm overwriting the existing file if you're saving changes to an existing configuration.
+1. **Exit Nano:** To exit the Nano text editor, press `Ctrl + X`.
 
-3. **Exit Nano:** To exit the Nano text editor, press `Ctrl + X`.
+2. **Save Changes:** Nano will prompt you to save your changes. Press `Y` to confirm.
+
+3. **Confirm Filename:** Nano will then prompt you to confirm the filename. Press `Enter` to save the changes to the same file.
 
 Ensure that you save any changes you've made before exiting the editor. Once you've saved and closed the file, you're ready to proceed to the next step.
 
