@@ -76,6 +76,11 @@ You've successfully installed Samba on your Ubuntu Server. With Samba installed,
 
 Once you have completed the installation process, proceed to the [Configuration Guide](configuration-guide.md) to configure Samba shares on your Ubuntu Server.
 
+## Configuration Guide
+![Samba Logo](images/samba-logo.jpg)
+
+Now that Samba is installed, let's configure it to create network shares.
+
 ## Step 1: Create a Folder for Sharing
 
 Before configuring Samba shares, you'll need to create a folder on your Ubuntu Server that you want to share with other devices on the network.
@@ -167,11 +172,8 @@ To apply the changes made to the Samba configuration file, you'll need to restar
 
 
 Once you've restarted the Samba service and verified its status, the changes made to the Samba configuration file should be applied. You can now proceed to access your configured shares from other devices on the network.
-## Configuration Guide
 
-![Samba Logo](images/samba-logo.jpg)
 
-Now that Samba is installed, let's configure it to create network shares.
 
 ## Troubleshooting Guide
 
