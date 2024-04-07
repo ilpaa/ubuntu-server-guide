@@ -43,7 +43,7 @@ In this section, we'll cover the installation of Samba on Ubuntu Server.
 
 ## Configuration Guide
 
-![Samba Logo](images/samba-logo.png)
+![Samba Logo](images/samba-logo.jpg)
 
 Now that Samba is installed, let's configure it to create network shares.
 
