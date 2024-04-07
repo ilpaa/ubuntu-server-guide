@@ -1,6 +1,6 @@
 # Configuration Guide
 
-![Samba Logo](images/samba-logo.png)
+![Samba Logo](images/samba-logo.jpg)
 
 Now that Samba is installed, let's configure it to create network shares.
 
@@ -20,11 +20,58 @@ Within the configuration file, you'll define shares by adding sections similar t
 
 ```ini
 [share_name]
-   comment = Shared Folder
    path = /path/to/shared/folder
    browsable = yes
    guest ok = yes
    read only = no
-   create mask = 0777
-   directory mask = 0777
 ```
+
+- **`[share_name]`:** Replace `share_name` with a unique name for your share. This name will be used to identify the share when accessing it from other devices on the network.
+
+
+- **`path`:** Specify the full path to the folder you want to share. For example, `/srv/samba/share`.
+
+- **`browsable`:** Set this parameter to `yes` to allow users to browse the shared folder when accessing the Samba server. If set to `no`, the share will be hidden from browsing.
+
+- **`guest ok`:** This parameter determines whether guest users are allowed to access the share without providing a username and password. Set it to `yes` if you want to allow guest access.
+
+- **`read only`:** If set to `yes`, users will only have read permissions for files within the shared folder. Set it to `no` to allow users to create, modify, and delete files within the share.
+
+Adjust these parameters according to your specific requirements and security considerations. Once you've defined your shares, save the configuration file and proceed to the next step.
+
+## Step 3: Save and Close the File
+
+After making changes to the Samba configuration file, you'll need to save your modifications and close the editor.
+
+1. **Save Changes:** In the Nano text editor, press `Ctrl + O` to write the changes to the file.
+   
+2. **Confirm Save:** Press `Enter` to confirm the filename. If prompted, you may need to confirm overwriting the existing file if you're saving changes to an existing configuration.
+
+3. **Exit Nano:** To exit the Nano text editor, press `Ctrl + X`.
+
+Ensure that you save any changes you've made before exiting the editor. Once you've saved and closed the file, you're ready to proceed to the next step.
+
+## Step 4: Restart Samba Service
+
+To apply the changes made to the Samba configuration file, you'll need to restart the Samba service.
+
+1. **Restart Samba:** Run the following command in your terminal to restart the Samba service:
+
+   ```bash
+   sudo systemctl restart smbd
+   ```
+   This command stops and then starts the Samba service, allowing the changes to take effect.
+
+2. **Verify Samba Service Status:** After restarting the Samba service, you can verify its status to ensure that it's running without any errors. Use the following command:
+   
+   ```bash
+   sudo systemctl status smbd
+   ```
+   This command displays the current status of the Samba service, indicating whether it's active (running) or inactive (stopped).
+
+
+Once you've restarted the Samba service and verified its status, the changes made to the Samba configuration file should be applied. You can now proceed to access your configured shares from other devices on the network.
+
+
+
+
