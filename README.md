@@ -33,7 +33,26 @@ To install Ubuntu Server, you'll need to create a bootable USB drive using a too
 
 Insert the bootable USB drive into the computer where you want to install Ubuntu Server and boot from it. Follow the on-screen instructions to install Ubuntu Server, choosing options such as language, keyboard layout, and disk partitioning as needed.
 
-### Step 4: SSH to the Server
+### Step 4: Install OpenSSH Server
+
+Before proceeding with Samba installation, ensure that OpenSSH server is installed on your Ubuntu Server. Follow these steps to install it:
+
+1. **Update Package Lists:** Before installing new packages, it's a good idea to update the package lists for repositories. Run the following command:
+
+    ```bash
+    sudo apt update && sudo apt upgrade
+    ```
+
+2. **Install OpenSSH Server:** Once the package lists are updated, you can install OpenSSH server by running the following command:
+
+    ```bash
+    sudo apt install openssh-server
+    ```
+
+    This command will install the OpenSSH server package, allowing you to securely connect to your Ubuntu Server remotely using SSH.
+
+
+### Step 5: SSH to the Server
 
 1. **Open a Terminal on Your PC:** If you're using Linux or macOS, open the Terminal application. If you're using Windows, you can use an SSH client like PuTTY or the built-in Windows OpenSSH client.
 
