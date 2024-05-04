@@ -210,14 +210,14 @@ Once you've restarted the Samba service and verified its status, the changes mad
 
 On your Windows PC, you can right-click This PC in the Explorer, and select Map network drive
 
- ![win_1](img/1.png)
+ ![win_1](images/1.png)
 
 Input two backslashes followed by the IP of your server, make sure it’s valid by clicking “Browse” and seeing if your files are in there as they should be.
 
- ![win_1](img/2.png)
+ ![win_1](images/2.png)
 
 On the Mac, you can connect to it by opening Finder, selecting Go from the drop-downs, and clicking Connect to Server, where you input smb:// followed by the IP of your server and click Connect.
- ![win_1](img/mac.png)
+ ![win_1](images/mac.png)
 
 By following these steps, you can easily connect to your Ubuntu Server and access its shared folders from your mac or windows. Enjoy seamless file sharing across your network!
 
